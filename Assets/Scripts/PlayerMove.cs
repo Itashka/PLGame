@@ -14,15 +14,12 @@ public class PlayerMove : MonoBehaviour
     public Transform GroundCheck;
     public float checkRadius = 0.4f;
     public LayerMask Ground;
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         Run();
@@ -46,7 +43,6 @@ public class PlayerMove : MonoBehaviour
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.W) && onGround)
-            //rb.velocity = new Vector2(rb.velocity.x, JumpForse);
             rb.AddForce(Vector2.up * JumpForse);
     }
     void CheckingGround()

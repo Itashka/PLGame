@@ -7,15 +7,11 @@ public class FallingPlatform : MonoBehaviour
     Rigidbody2D rb;
     Vector2 currentPosition;
     bool moveingBack;
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentPosition = transform.position;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(moveingBack == true)
